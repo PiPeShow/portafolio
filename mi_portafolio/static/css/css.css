@@ -1,0 +1,257 @@
+body {
+    font-family: 'Monoid', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #2f2f2f;
+    color: #e0e0e0;
+    transition: background-color 0.5s ease-in-out;
+}
+/* Header */
+
+@keyframes fadeInHeader {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background-image: url("/static/images/fondo.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInHeader 2s ease-out;
+    animation: fadeInText 4s ease-out;
+}
+
+header .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    animation: fadeInText 4s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.header-content p {
+    font-size: 20px;
+    color: #e0e0e0;
+}
+
+/* Estilos para los íconos sociales */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 90px; /* Tamaño de los íconos */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Agrandar íconos al pasar el ratón */
+}
+
+/* Estilos para los logos de los programas */
+.program-logos {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.program-icon {
+    width: 200px; /* Tamaño de los logos */
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.program-icon:hover {
+    transform: scale(1.2); /* Agrandar imagen al pasar el ratón */
+    width: 90px; /* Ajustar el tamaño deseado */
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Sección About Me y Juego Snake */
+.about-and-game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInContent 2s ease-out;
+}
+
+@keyframes fadeInContent {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.about-content, .game-content {
+    width: 48%;
+    min-width: 300px;
+    text-align: center;
+}
+
+/* Botones */
+button {
+    background-color: #555;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #888;
+    transform: scale(1.05);
+}
+
+/* Sección de habilidades */
+.programming-languages {
+    background-color: #444;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.programming-languages h2 {
+    font-size: 2em;
+}
+
+.logos img {
+    width: 80px; /* Tamaño original */
+    margin: 15px;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.logos img:hover {
+    transform: scale(1.5); /* Agrandar imagen */
+    width: 170px; /* Puedes ajustar el tamaño deseado */
+}
+
+/* Formulario de contacto */
+
+.contact{
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact input, .contact textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .contact form {
+        width: 90%;
+    }
+}
+.contact button {
+    background-color: #4e8cff;
+}
+
+.contact button:hover {
+    background-color: #3577e2;
+}
+
+/* Estilos para el Snake Game */
+#snakeCanvas {
+    margin: 20px auto;
+    border: 2px solid #4e8cff;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social-links a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #4e8cff;
+}
+#startButton {
+    margin: 0 auto;  /* Asegura que el botón esté centrado en su contenedor */
+    display: block;  /* Asegura que el botón se muestre como bloque */
+    text-align: center;  /* Centra el texto dentro del botón */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .about-and-game {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-content, .game-content {
+        width: 90%;
+    }
+}
+
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1); /* Pantalla completamente negra */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 1;
+    animation: fadeInScreen 3s forwards;
+}
+
+@keyframes fadeInScreen {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Portafolio Personal</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/css.css') }}">
+        <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <audio id="bgMusic" loop>
+            <source src="{{ url_for('static', filename='music/music.mp3') }}" type="audio/mp3">
+        </audio>
+    </head>
+    <body>
+        <div id="welcome-screen" class="fade-in">
+            <h1>Bienvenido</h1>
+        </div>
+        <header>
+            <div class="header-content fade-in-header">
+                <h1>Hola, soy Felipe Pizarro</h1>
+                <p>Desarrollador web | Programador</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/felipe-pizarro-lecaros-85111b2a9" target="_blank">
+                    <img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/felipe_lecaros10/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+            <!--
+            <div class="program-logos">
+                <img src="{{ url_for('static', filename='images/Java.png') }}" alt="Java" class="program-icon">
+                <img src="{{ url_for('static', filename='images/Python.png') }}" alt="Python" class="program-icon">
+                <img src="{{ url_for('static', filename='images/js.png') }}" alt="JavaScript" class="program-icon">
+            </div>
+            -->
+        </header>
+        
+        <section class="about-and-game">
+            <div class="about-content">
+                <h2>About me</h2>
+
+                <p id="about-text">Soy desarrollador de software con experiencia en programación en lenguajes como Java, Python y JavaScript, estoy familiarizado trabajando con frameworks como Flask y Django. A lo largo de mi carrera, he trabajado en el diseño y desarrollo de soluciones eficientes, adaptadas a las necesidades del cliente. Actualmente, desempeño un rol administrativo en el que gestiono procesos y documentación del mercado exterior, utilizando herramientas como Excel y SAP para optimizar flujos de trabajo.</p>
+                <p id="about-text">Mi objetivo es seguir ampliando mis competencias en desarrollo web y back-end, especialmente en áreas como arquitecturas escalables, bases de datos y optimización de rendimiento. Estoy apasionado por contribuir a proyectos innovadores que generen un impacto real, combinando mi experiencia técnica con mi capacidad para gestionar proyectos de manera eficiente.</p>
+                <p id="about-text">Siempre estoy abierto a nuevos desafíos y oportunidades de colaboración. Si tienes un proyecto interesante o deseas hablar sobre cómo puedo ayudarte a llevar tus ideas a la realidad, no dudes en contactarme.</p>
+                <button id="translate-btn">Translate</button>
+            </div>
+            <div class="game-content">
+                <h2>Snake</h2>
+                <canvas id="snakeCanvas" width="400" height="400"></canvas>
+                <button id="startButton">PLAY</button>
+                <!--<button id="musicButton">Pausar/Reanudar Música</button>-->
+            </div>
+        </section>
+        
+        <section class="programming-languages">
+            <h2>Skills</h2>
+            <div class="logos">
+                <img class="animated-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo 1">
+                <img class="animated-logo" src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo 2">
+                <img class="animated-logo" src="{{ url_for('static', filename='images/logo3.png') }}" alt="Logo 3">
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h2>Contact with me</h2>
+            <form id="contact-form" action="https://formspree.io/f/manqbaya" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre/Your name" required autocomplete="off">
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Tu email/Your email" required autocomplete="off">
+                
+                <label for="message">Write your message</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje/Write your message" required rows="4"></textarea>
+                
+                <button type="submit" aria-label="Enviar mensaje">Enviar</button>
+            </form>
+        </section>
+        
+        <footer>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/felipe-pizarro-lecaros-85111b2a9" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/felipe_lecaros10/" target="_blank">Instagram</a>
+                <button id="musicButton" onclick="toggleMusic()">Pause/Resume Music</button>
+            </div>
+            <p>&copy; 2025 Felipe Pizarro Lecaros</p>
+        </footer>
+        <script src="{{ url_for('static', filename='js/snake.js') }}"></script>
+    </body>
+    </html>
+    
